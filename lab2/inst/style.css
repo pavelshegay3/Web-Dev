@@ -1,0 +1,67 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#big-img{
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-right: 100px;
+}
+form{
+    background-color: rgb(255,255,255);
+    
+    float: right;
+    margin-right: 350px;
+    margin-top: 100px;
+    width: 330px;
+    height: 370px;
+    border: 1px solid gray;
+    padding: 10px;
+}
+form img{
+    padding-left: 12px;
+}
+form #login{
+    background-color: rgb(110, 183, 252);
+    color: white;
+    font-weight: bold;
+    margin:auto;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+form p{
+    text-align: center;
+}
+form #facebook-login{
+    color: rgb(50, 124, 194);
+    display: block;
+    text-align: center;
+
+}
+form #forgot-password{
+    color: darkblue;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 5px;
+
+
+}
+input{
+    display: block;
+    margin: auto;
+    border-radius: 2px;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    color: rgb(247,247,247);
+    font-size: 12px;
+    border: 1px solid gray;
+    background-color: rgb(240,240,240);
+}
+#sing-up{
+    
+}
