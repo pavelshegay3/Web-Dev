@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(247,247,247);
+}
+form{
+    background-color: rgb(255,255,255);
+    
+    float: right;
+    margin-right: 350px;
+    margin-top: 100px;
+    width: 330px;
+    height: 270px;
+    border-radius: 5px;
+    padding: 10px;
+}
+input{
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    color: rgb(247,247,247);
+    font-size: 15px;
+    border: 1px solid gray;
+}
+#login{
+    background-color: rgb(0,132,255);
+    color: white;
+    font-weight: bold;
+    margin:auto;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+#forgot-password{
+    color: rgb(0,132,255);
+    display: block;
+    padding-left: 100px;
+
+}
+#new-account{
+    background-color: rgb(72, 184, 72);
+    color: white;
+    font-weight: bold;
+    margin:auto;
+    width: 65%;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+#facebook-box{
+    float:left;
+    width: 350px;
+    margin-top: 50px;
+    margin-left: 350px;
+}
+#facebook-box img{
+    margin-left: -120px;
+}
+#facebook-box p{
+    margin-top:-50px;
+    font-size: 25px;
+}
+#celebrity-link h3{
+    position: relative;
+    width: 270px;
+}
