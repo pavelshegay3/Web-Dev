@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <title>ToDo List</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    #container-title{
+      background-color: rgb(38, 37, 34);
+      height: 42px;
+    }
+    #container-title p{
+      color: white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 50px;
+    }
+    #container-main{
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    #container-main h1{
+      
+    }
+    #todo-input{
+      width: 80%;
+      height: 40px;
+      padding: 10px;
+      margin-bottom: 10px;
+      
+    }
+    #button-add{
+      width: 10%;
+      height: 40px;
+      background-color: rgb(42, 91, 156);
+      color: white;
+      border: 1px solid rgb(200, 200, 200);
+      cursor: pointer;
+    }
+    #todo-list{
+      padding: 0;
+    }
+    #todo-task{
+      display: flex;
+      align-items: center;
+      margin-bottom: -1px;
+      padding: 15px;
+      border: 1px solid rgb(200, 200, 200);
+    }
+    #todo-task input{
+      margin-right: 30px;
+      margin-left: 0;
+    }
+    #todo-task span{
+      flex-grow: 1;
+    }
+    #todo-task button{
+      padding: 5px 10px;
+      background-color: red;
+      color: white;
+      border: 1px solid rgb(200, 200, 200);
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div id="container-title">
+      <p>ToDo List</p>
+    </div>
+    <div id="container-main">
+      <h1>ToDo List</h1>
+      <div>
+        <input id="todo-input" placeholder="New Task">
+        <button id="button-add" onclick="addTask()">Add</button>
+      </div>
+      <ul id="todo-list"></ul>
+    </div>
+
+    <script>
+      function addTask(){
+        let input = document.getElementById("todo-input");
+        let value = input.value.trim();
+        if(value != ""){
+          let newTask = document.createElement("li");
+          newTask.id = "todo-task";
+          newTask.innerHTML = `
+            <input type="checkbox" onclick="checkTask(this)">
+            <span>${value}</span>
+            <button onclick="removeTask(this)">x</button>`;
+          document.getElementById("todo-list").appendChild(newTask);
+          input.value = '';
+        }
+      }
+      function checkTask(checkbox){
+        let text = checkbox.nextElementSibling;
+        if(checkbox.checked) text.style.textDecoration = "line-through";
+        else text.style.textDecoration = "none";
+      }
+      function removeTask(button){
+        let task = button.parentElement;
+        task.remove();
+      }
+    </script>
+  </body>
+</html>
