@@ -1,0 +1,21 @@
+<div id="categories">
+    <button *ngFor="let category of categories" (click)="selectCategory(category)">
+        <h2>{{category.name}}</h2>
+    </button>
+</div>
+
+
+<div id="products" *ngIf="selectedCategory">
+    <h2>{{selectedCategory.name}}</h2>
+    <div *ngFor="let product of selectedCategory.products" id="product">
+        <img [src] = "product.image" [alt]="product.name">
+        <a [href] = "product.link" target="_blank">
+            <h3>{{product.name}}</h3>
+        </a>
+        <button (click) = "shareProduct(product)">Share on Telegram!</button>
+        <p [innerHTML]="product.description"></p>
+        <p>Likes: {{product.likes}}</p>
+        <button (click) = "removeProduct(product)">x</button>
+        <button (click) = "likeProduct(product)">LIKE</button>
+    </div>
+</div>
