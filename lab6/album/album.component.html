@@ -1,0 +1,5 @@
+<p>album works!</p>
+<div *ngFor="let album of albums">
+    <h3>{{album.title}}</h3>
+    <a [routerLink]="['/albums', album.id]">View Details</a>
+</div>
