@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %}
+<h3>{{ title }}</h3>
+<ul>
+    {% for vacancy in vacancies %}
+    <li>
+        <h4><a href="{% url 'vacancy_details' vacancy.id %}">{{ vacancy.name }}</a></h4>
+        <p>{{ vacancy.salary }} KZT, <a href="{% url 'company_details' vacancy.company.id %}">{{ vacancy.company }}</a></p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
